@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/goodone"
+    >
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.729">
+
+        <RadioButton
+            android:id="@+id/barbarian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Barbarian"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/bard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Bard"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/cleric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Cleric"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/druid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Druid"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/monk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Monk"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/paladin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Paladin"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/ranger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Ranger"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/rogue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Rogue"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/sorcerer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Sorcerer"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/warrior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Warrior"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+        <RadioButton
+            android:id="@+id/wizard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@android:color/holo_red_dark"
+            android:text="Wizard"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="35sp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:gravity="center"
+        android:text="Choose your class"
+        android:textSize="50sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/prawa" />
+
+</android.support.constraint.ConstraintLayout>
