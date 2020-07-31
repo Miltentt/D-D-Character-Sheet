@@ -2,9 +2,13 @@ package com.example.ddcharactersheet.Character_Creation;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -19,22 +23,31 @@ import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Add_Char extends AppCompatActivity {
+public class Add_Char extends Fragment {
 
 private Typeface font;
 private TextView choose;
 private RadioGroup radioGroup;
 private String[] clas={"barbarian","bard","cleric","druid","monk","paladin","ranger","rogue","sorcerer","warrior","wizard"};
 
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.add_char,container,false);
+        choose = view.findViewById(R.id.choose);
+        font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Vecna.otf");
+        radioGroup = view.findViewById(R.id.radio);
+        return view;
+    }
 
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_char);
-        getSupportActionBar().hide();
-        font = Typeface.createFromAsset(getAssets(), "fonts/Vecna.otf");
-choose = findViewById(R.id.choose);
+
+
+
+
 choose.setTypeface(font);
-        radioGroup = findViewById(R.id.radio);
+
         for (int i=0;i<radioGroup.getChildCount();i++)
         {
             RadioButton a = (RadioButton)radioGroup.getChildAt(i);
@@ -52,9 +65,9 @@ choose.setTypeface(font);
     View rb = radioGroup.findViewById(buttonid);
     int idx = radioGroup.indexOfChild(rb);
 Character character = new Character(1,"lol",clas[idx]);
-        Base_Stats base = new Base_Stats(this,character);
+        Base_Stats base = new Base_Stats(getContext(),character);
 
-        Intent i = new Intent(this, Add_Char_2.class);
+        Intent i = new Intent(getContext(), Add_Char_2.class);
         i.putExtra("character", (Serializable)character);
         startActivity(i);
 
