@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/goodone">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="591dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="679dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="75dp">
+
+                <RadioButton
+                    android:id="@+id/dwarf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Dwarf"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/human"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Human"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/elf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Elf"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/gnome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Gnome"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/halfelf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Half-Elf"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/halforc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Half-Orc"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/halfling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Halfling"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/tiefling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Tiefling"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/orog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Orog"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/feyri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Fey'ri"
+                    android:textSize="35sp" />
+
+                <RadioButton
+                    android:id="@+id/fireg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:text="Fire Genasi"
+                    android:textSize="35sp" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/choose1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Choose your race"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/prawa" />
+
+</android.support.constraint.ConstraintLayout>

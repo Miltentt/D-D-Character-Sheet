@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ddcharactersheet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Character_Creation.Add_Char">
+
+            </activity>
+        <activity android:name=".Recursive.Feats">
+
+        </activity>
+        <activity android:name=".Character_Creation.Add_Char_2">
+
+        </activity>
+        <activity android:name=".Character_Creation.Race_Main">
+        </activity>
+        <activity android:name=".Recursive.Skills">
+        </activity>
+        <activity android:name=".Recursive.Bonus_Feat">
+        </activity>
+        <activity android:name=".Character_Creation.Domain">
+        </activity>
+        <activity android:name=".Recursive.Spells_Act">
+        </activity>
+        <activity android:name=".Character_Creation.Name">
+        </activity>
+        <activity android:name=".Character_Pages.Character_Sheet">
+        </activity>
+        <activity android:name=".Character_Pages.Character_Skills">
+        </activity>
+        <activity android:name=".Character_Pages.Feat_Character">
+        </activity>
+        <activity android:name=".Character_Pages.Spells_Character">
+        </activity>
+        <activity android:name=".Recursive.HP_LVLUP">
+        </activity>
+        <activity android:name=".Recursive.Atribute_Level_UP">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.Equipment">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.EQ_Type">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.Add_Weapon">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.Add_Armor">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.Add_Other">
+        </activity>
+        <activity android:name=".Character_Pages.Equipment.Add_Shield">
+        </activity>
+        <activity android:name=".Character_Pages.Cleric_Spells_Char">
+        </activity>
+        <activity android:name=".Character_Pages.Spells_OtherClasses">
+        </activity>
+        <activity android:name=".Character_Pages.No_Spells_Character">
+        </activity>
+    </application>
+
+</manifest>

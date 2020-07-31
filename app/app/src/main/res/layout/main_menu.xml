@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:title="Statistics"
+        android:id="@+id/Stats"
+        ></item>
+    <item android:title="Skills"
+        android:id="@+id/Skills" ></item>
+    <item android:title="Feats"
+        android:id="@+id/Feats" ></item>
+    <item android:title="Equipment"
+        android:id="@+id/Equipment" ></item>
+    <item android:title="Spells"
+        android:id="@+id/Spells" ></item>
+  >
+
+</menu>

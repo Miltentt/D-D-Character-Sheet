@@ -24,15 +24,15 @@ public class Spell_Adapter_Character extends RecyclerView.Adapter<Spell_Adapter_
 
     }
     @Override
-    public Spell_Adapter_Character.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.spells_recycle_card,parent,false);
 
-        return new Spell_Adapter_Character.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(Spell_Adapter_Character.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(Spellsl.get(position).getName());
         holder.benefits.setText(Spellsl.get(position).getDescription());
 

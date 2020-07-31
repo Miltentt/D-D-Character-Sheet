@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.ddcharactersheet.Feats_List;
+import com.example.ddcharactersheet.Model.Feats_List;
 import com.example.ddcharactersheet.R;
 
 import java.util.LinkedList;
@@ -25,14 +25,14 @@ public class Feats_Recycler_Character extends RecyclerView.Adapter<Feats_Recycle
         this.Inflater = LayoutInflater.from(context);
     }
     @Override
-    public Feats_Recycler_Character.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = Inflater.inflate(R.layout.feats_recycler_card,parent,false);
 
-        return new Feats_Recycler_Character.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(Feats_Recycler_Character.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
         holder.name.setText(list.get(position).getName());
         holder.benefits.setText("Benefit: " + list.get(position).getBenefits());
