@@ -1,29 +1,30 @@
 package com.example.ddcharactersheet.Recursive;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.Character_Creation.Name;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
-import com.example.ddcharactersheet.R;
-import com.example.ddcharactersheet.Spells;
 import com.example.ddcharactersheet.Adapters.Spells_Adapter;
-import com.example.ddcharactersheet.RoomDB.Spells_Database;
-import com.example.ddcharactersheet.Model.Spells_Entity;
-import com.example.ddcharactersheet.Spells_Fragments.Fragment1;
 import com.example.ddcharactersheet.Adapters.Spells_Slide;
+import com.example.ddcharactersheet.Character_Creation.Name;
+import com.example.ddcharactersheet.Model.Character;
+import com.example.ddcharactersheet.Model.Spells_Entity;
+import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.RoomDB.Spells_Database;
+import com.example.ddcharactersheet.Spells;
+import com.example.ddcharactersheet.Spells_Fragments.Fragment1;
 import com.example.ddcharactersheet.Statistics.Wizard_Spells;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+import androidx.viewpager.widget.ViewPager;
 
 public class Spells_Act extends AppCompatActivity {
 private List<com.example.ddcharactersheet.Spells> list = new LinkedList<>();

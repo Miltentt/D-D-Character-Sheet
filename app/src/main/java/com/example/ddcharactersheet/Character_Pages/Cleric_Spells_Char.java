@@ -1,29 +1,31 @@
 package com.example.ddcharactersheet.Character_Pages;
 
-import android.arch.persistence.room.Room;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
-import com.example.ddcharactersheet.Character_Pages.Equipment.Equipment;
-import com.example.ddcharactersheet.Statistics.Cleric_Spells;
-import com.example.ddcharactersheet.Character_Pages.Equipment.Fragment_Spells_Character;
-import com.example.ddcharactersheet.R;
-import com.example.ddcharactersheet.Spells;
-import com.example.ddcharactersheet.RoomDB.Spells_Database;
-import com.example.ddcharactersheet.Model.Spells_Entity;
 import com.example.ddcharactersheet.Adapters.Spells_Slide;
+import com.example.ddcharactersheet.Character_Pages.Equipment.Equipment;
+import com.example.ddcharactersheet.Character_Pages.Equipment.Fragment_Spells_Character;
+import com.example.ddcharactersheet.Model.Character;
+import com.example.ddcharactersheet.Model.Spells_Entity;
+import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.RoomDB.Spells_Database;
+import com.example.ddcharactersheet.Spells;
+import com.example.ddcharactersheet.Statistics.Cleric_Spells;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+import androidx.viewpager.widget.ViewPager;
 
 public class Cleric_Spells_Char extends AppCompatActivity {
 

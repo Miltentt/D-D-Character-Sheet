@@ -1,20 +1,21 @@
 package com.example.ddcharactersheet.Character_Pages.Equipment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ddcharactersheet.R;
 import com.example.ddcharactersheet.Adapters.Spell_Adapter_Character;
+import com.example.ddcharactersheet.R;
 import com.example.ddcharactersheet.Spells;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Fragment_Spells_Character extends Fragment {
     View v;

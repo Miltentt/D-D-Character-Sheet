@@ -1,14 +1,16 @@
 package com.example.ddcharactersheet.Model;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.arch.persistence.room.TypeConverters;
+
 
 import com.example.ddcharactersheet.TypeConverter;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
 @Entity
 public class Class_Feat_Entity {

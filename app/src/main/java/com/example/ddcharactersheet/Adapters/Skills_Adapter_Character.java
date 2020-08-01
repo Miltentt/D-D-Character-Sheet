@@ -1,9 +1,7 @@
 package com.example.ddcharactersheet.Adapters;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.Skill_List;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 public class Skills_Adapter_Character extends RecyclerView.Adapter<Skills_Adapter_Character.ViewHolder> {
     private List<Skill_List> list = new LinkedList<>();

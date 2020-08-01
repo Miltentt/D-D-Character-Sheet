@@ -1,22 +1,23 @@
 package com.example.ddcharactersheet.Recursive;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.Character_Pages.Character_Sheet;
+import com.example.ddcharactersheet.Model.Character;
 import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.Statistics.Extra_Spells;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 public class Atribute_Level_UP extends AppCompatActivity {
 
@@ -184,7 +185,7 @@ Characters.get(position).setStrc(calculatemod(Characters.get(position).getStr())
         Characters.get(position).setIntelc(calculatemod(Characters.get(position).getIntel()));
         Characters.get(position).setWisc(calculatemod(Characters.get(position).getWis()));
         Characters.get(position).setChac(calculatemod(Characters.get(position).getCha()));
-Extra_Spells extra = new Extra_Spells(this,Characters.get(position));
+Extra_Spells.Extra_Spells(Characters.get(position));
         Characters.get(position).setAC(Characters.get(position).getAC()+Characters.get(position).getDexc());
         db.characterdao().updatechar(Characters.get(position));
         Bundle extras = new Bundle();

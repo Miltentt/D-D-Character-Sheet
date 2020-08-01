@@ -10,11 +10,10 @@ import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import java.util.LinkedList;
 import java.util.List;
 
-public class  Base_Stats {
-    private Character character;
-    public Base_Stats(Context context, Character character) {
+public  class  Base_Stats {
 
-
+    public static Character Stats(Character character)
+    {
         switch (character.getClas()) {
             case "barbarian": {
                 switch(character.getLevel())
@@ -144,7 +143,7 @@ public class  Base_Stats {
 
                 }
 
-break;
+                break;
             }
             case "bard":
             {
@@ -487,7 +486,7 @@ break;
                         character.setSp9(4);
                         break;
                     }
-                    }
+                }
 
 
                 break;
@@ -679,7 +678,7 @@ break;
                         break;
                     }
                 }
-break;
+                break;
             }
             case "rogue":
             { switch(character.getLevel()) {
@@ -823,7 +822,7 @@ break;
 
 
 
-break;
+                break;
             }
             case "monk":
             {
@@ -1397,324 +1396,321 @@ break;
             }
             case "sorcerer" : {
 
-                    switch (character.getLevel()) {
-                        case 1: {
+                switch (character.getLevel()) {
+                    case 1: {
 
 
-                            character.setHp(4);
-                            character.setBAB("+0");
-                            character.setReflex(0);
-                            character.setFort(0);
-                            character.setWill(2);
-                            character.setAC(10);
-                            character.setSp0(5);
-                            character.setSp1(3);
-                            character.setSp2(0);
-                            character.setSp3(0);
-                            character.setSp4(0);
-                            character.setSp5(0);
-                            character.setSp6(0);
-                            character.setSp7(0);
-                            character.setSp8(0);
-                            character.setSp9(0);
-                            break;
-                        }
-                        case 2: {
-                            character.setBAB("+1");
-                            character.setWill(3);
-                            character.setSp0(6);
-                            character.setSp1(4);
-                            break;
-                        }
-                        case 3: {
-
-                            character.setReflex(1);
-                            character.setFort(1);
-                            character.setSp1(5);
-                            break;
-                        }
-                        case 4: {
-                            character.setBAB("+2");
-                            character.setWill(4);
-                            character.setSp1(6);
-                            character.setSp2(3);
-                            break;
-                        }
-                        case 5: {
-                            character.setSp2(4);
-                            break;
-                        }
-                        case 6: {
-                            character.setBAB("+3");
-                            character.setFort(2);
-                            character.setReflex(2);
-                            character.setWill(5);
-                            character.setSp2(5);
-                            character.setSp3(3);
-                            break;
-                        }
-                        case 7: {
-                            character.setSp2(6);
-                            character.setSp3(4);
-                            break;
-                        }
-                        case 8: {
-                            character.setBAB("4");
-                            character.setWill(6);
-                            character.setSp4(3);
-                            character.setSp3(5);
-                            break;
-                        }
-                        case 9: {
-                            character.setReflex(3);
-                            character.setFort(3);
-                            character.setSp4(4);
-                            character.setSp3(6);
-                            break;
-                        }
-                        case 10: {
-                            character.setBAB("+5");
-                            character.setWill(7);
-                            character.setSp4(5);
-                            character.setSp5(3);
-                            break;
-                        }
-                        case 11: {
-                            character.setSp4(6);
-                            character.setSp5(4);
-                            break;
-                        }
-                        case 12: {
-                            character.setBAB("+6/+1");
-                            character.setWill(8);
-                            character.setReflex(4);
-                            character.setFort(4);
-                            character.setSp5(5);
-                            character.setSp6(3);
-                            break;
-                        }
-                        case 13: {
-                            character.setSp5(6);
-                            character.setSp6(4);
-                            break;
-                        }
-                        case 14: {
-                            character.setBAB("+7/+2");
-                            character.setWill(9);
-                            character.setSp6(5);
-                            character.setSp7(3);
-                            break;
-                        }
-                        case 15: {
-
-                            character.setFort(5);
-                            character.setReflex(5);
-                            character.setSp6(6);
-                            character.setSp7(4);
-                            break;
-                        }
-                        case 16: {
-                            character.setBAB("+8/+3");
-                            character.setWill(10);
-                            character.setSp8(3);
-                            character.setSp7(5);
-                            break;
-                        }
-                        case 17: {
-                            character.setSp8(4);
-                            character.setSp7(6);
-                            break;
-                        }
-                        case 18: {
-                            character.setBAB("+9/+4");
-                            character.setReflex(6);
-                            character.setWill(11);
-                            character.setFort(6);
-                            character.setSp8(5);
-                            character.setSp9(3);
-                            break;
-                        }
-                        case 19: {
-                            character.setSp8(6);
-                            character.setSp9(4);
-
-                            break;
-                        }
-                        case 20: {
-                            character.setBAB("+10/+5");
-                            character.setWill(12);
-                            character.setSp9(6);
-                            break;
-                        }
-
+                        character.setHp(4);
+                        character.setBAB("+0");
+                        character.setReflex(0);
+                        character.setFort(0);
+                        character.setWill(2);
+                        character.setAC(10);
+                        character.setSp0(5);
+                        character.setSp1(3);
+                        character.setSp2(0);
+                        character.setSp3(0);
+                        character.setSp4(0);
+                        character.setSp5(0);
+                        character.setSp6(0);
+                        character.setSp7(0);
+                        character.setSp8(0);
+                        character.setSp9(0);
+                        break;
                     }
-                    break;
-
-            }
-                case "wizard":
-                {
-                    switch (character.getLevel()) {
-                        case 1: {
-
-
-                            character.setHp(4);
-                            character.setBAB("+0");
-                            character.setReflex(0);
-                            character.setFort(0);
-                            character.setWill(2);
-                            character.setAC(10);
-                            character.setSp0(3);
-                            character.setSp1(1);
-                            character.setSp2(0);
-                            character.setSp3(0);
-                            character.setSp4(0);
-                            character.setSp5(0);
-                            character.setSp6(0);
-                            character.setSp7(0);
-                            character.setSp8(0);
-                            character.setSp9(0);
-                            break;
-                        }
-                        case 2: {
-                            character.setBAB("+1");
-                            character.setWill(3);
-                            character.setSp0(4);
-                            character.setSp1(2);
-                            break;
-                        }
-                        case 3: {
-
-                            character.setReflex(1);
-                            character.setFort(1);
-                            character.setSp2(1);
-                            break;
-                        }
-                        case 4: {
-                            character.setBAB("+2");
-                            character.setWill(4);
-                            character.setSp1(3);
-                            character.setSp2(2);
-                            break;
-                        }
-                        case 5: {
-                            character.setSp3(1);
-                            break;
-                        }
-                        case 6: {
-                            character.setBAB("+3");
-                            character.setFort(2);
-                            character.setReflex(2);
-                            character.setWill(5);
-                            character.setSp3(2);
-                            character.setSp2(3);
-                            break;
-                        }
-                        case 7: {
-                            character.setSp4(1);
-                            character.setSp1(4);
-                            break;
-                        }
-                        case 8: {
-                            character.setBAB("4");
-                            character.setWill(6);
-                            character.setSp4(2);
-                            character.setSp3(3);
-                            break;
-                        }
-                        case 9: {
-                            character.setReflex(3);
-                            character.setFort(3);
-                            character.setSp2(4);
-                            character.setSp5(1);
-                            break;
-                        }
-                        case 10: {
-                            character.setBAB("+5");
-                            character.setWill(7);
-                            character.setSp4(3);
-                            character.setSp5(2);
-                            break;
-                        }
-                        case 11: {
-                            character.setSp3(4);
-                            character.setSp6(1);
-                            break;
-                        }
-                        case 12: {
-                            character.setBAB("+6/+1");
-                            character.setWill(8);
-                            character.setReflex(4);
-                            character.setFort(4);
-                            character.setSp5(3);
-                            character.setSp6(2);
-                            break;
-                        }
-                        case 13: {
-                            character.setSp4(4);
-                            character.setSp7(1);
-                            break;
-                        }
-                        case 14: {
-                            character.setBAB("+7/+2");
-                            character.setWill(9);
-                            character.setSp6(3);
-                            character.setSp7(2);
-                            break;
-                        }
-                        case 15: {
-
-                            character.setFort(5);
-                            character.setReflex(5);
-                            character.setSp5(4);
-                            character.setSp8(1);
-                            break;
-                        }
-                        case 16: {
-                            character.setBAB("+8/+3");
-                            character.setWill(10);
-                            character.setSp8(2);
-                            character.setSp7(3);
-                            break;
-                        }
-                        case 17: {
-                            character.setSp9(1);
-                            character.setSp6(4);
-                            break;
-                        }
-                        case 18: {
-                            character.setBAB("+9/+4");
-                            character.setReflex(6);
-                            character.setWill(11);
-                            character.setFort(6);
-                            character.setSp8(3);
-                            character.setSp9(2);
-                            break;
-                        }
-                        case 19: {
-                            character.setSp7(4);
-                            character.setSp9(3);
-
-                            break;
-                        }
-                        case 20: {
-                            character.setBAB("+10/+5");
-                            character.setWill(12);
-                            character.setSp9(4);
-                            character.setSp8(4);
-                            break;
-                        }
-
+                    case 2: {
+                        character.setBAB("+1");
+                        character.setWill(3);
+                        character.setSp0(6);
+                        character.setSp1(4);
+                        break;
                     }
-                    break;
+                    case 3: {
 
+                        character.setReflex(1);
+                        character.setFort(1);
+                        character.setSp1(5);
+                        break;
+                    }
+                    case 4: {
+                        character.setBAB("+2");
+                        character.setWill(4);
+                        character.setSp1(6);
+                        character.setSp2(3);
+                        break;
+                    }
+                    case 5: {
+                        character.setSp2(4);
+                        break;
+                    }
+                    case 6: {
+                        character.setBAB("+3");
+                        character.setFort(2);
+                        character.setReflex(2);
+                        character.setWill(5);
+                        character.setSp2(5);
+                        character.setSp3(3);
+                        break;
+                    }
+                    case 7: {
+                        character.setSp2(6);
+                        character.setSp3(4);
+                        break;
+                    }
+                    case 8: {
+                        character.setBAB("4");
+                        character.setWill(6);
+                        character.setSp4(3);
+                        character.setSp3(5);
+                        break;
+                    }
+                    case 9: {
+                        character.setReflex(3);
+                        character.setFort(3);
+                        character.setSp4(4);
+                        character.setSp3(6);
+                        break;
+                    }
+                    case 10: {
+                        character.setBAB("+5");
+                        character.setWill(7);
+                        character.setSp4(5);
+                        character.setSp5(3);
+                        break;
+                    }
+                    case 11: {
+                        character.setSp4(6);
+                        character.setSp5(4);
+                        break;
+                    }
+                    case 12: {
+                        character.setBAB("+6/+1");
+                        character.setWill(8);
+                        character.setReflex(4);
+                        character.setFort(4);
+                        character.setSp5(5);
+                        character.setSp6(3);
+                        break;
+                    }
+                    case 13: {
+                        character.setSp5(6);
+                        character.setSp6(4);
+                        break;
+                    }
+                    case 14: {
+                        character.setBAB("+7/+2");
+                        character.setWill(9);
+                        character.setSp6(5);
+                        character.setSp7(3);
+                        break;
+                    }
+                    case 15: {
 
+                        character.setFort(5);
+                        character.setReflex(5);
+                        character.setSp6(6);
+                        character.setSp7(4);
+                        break;
+                    }
+                    case 16: {
+                        character.setBAB("+8/+3");
+                        character.setWill(10);
+                        character.setSp8(3);
+                        character.setSp7(5);
+                        break;
+                    }
+                    case 17: {
+                        character.setSp8(4);
+                        character.setSp7(6);
+                        break;
+                    }
+                    case 18: {
+                        character.setBAB("+9/+4");
+                        character.setReflex(6);
+                        character.setWill(11);
+                        character.setFort(6);
+                        character.setSp8(5);
+                        character.setSp9(3);
+                        break;
+                    }
+                    case 19: {
+                        character.setSp8(6);
+                        character.setSp9(4);
+
+                        break;
+                    }
+                    case 20: {
+                        character.setBAB("+10/+5");
+                        character.setWill(12);
+                        character.setSp9(6);
+                        break;
+                    }
 
                 }
+                break;
+
+            }
+            case "wizard":
+            {
+                switch (character.getLevel()) {
+                    case 1: {
+
+
+                        character.setHp(4);
+                        character.setBAB("+0");
+                        character.setReflex(0);
+                        character.setFort(0);
+                        character.setWill(2);
+                        character.setAC(10);
+                        character.setSp0(3);
+                        character.setSp1(1);
+                        character.setSp2(0);
+                        character.setSp3(0);
+                        character.setSp4(0);
+                        character.setSp5(0);
+                        character.setSp6(0);
+                        character.setSp7(0);
+                        character.setSp8(0);
+                        character.setSp9(0);
+                        break;
+                    }
+                    case 2: {
+                        character.setBAB("+1");
+                        character.setWill(3);
+                        character.setSp0(4);
+                        character.setSp1(2);
+                        break;
+                    }
+                    case 3: {
+
+                        character.setReflex(1);
+                        character.setFort(1);
+                        character.setSp2(1);
+                        break;
+                    }
+                    case 4: {
+                        character.setBAB("+2");
+                        character.setWill(4);
+                        character.setSp1(3);
+                        character.setSp2(2);
+                        break;
+                    }
+                    case 5: {
+                        character.setSp3(1);
+                        break;
+                    }
+                    case 6: {
+                        character.setBAB("+3");
+                        character.setFort(2);
+                        character.setReflex(2);
+                        character.setWill(5);
+                        character.setSp3(2);
+                        character.setSp2(3);
+                        break;
+                    }
+                    case 7: {
+                        character.setSp4(1);
+                        character.setSp1(4);
+                        break;
+                    }
+                    case 8: {
+                        character.setBAB("4");
+                        character.setWill(6);
+                        character.setSp4(2);
+                        character.setSp3(3);
+                        break;
+                    }
+                    case 9: {
+                        character.setReflex(3);
+                        character.setFort(3);
+                        character.setSp2(4);
+                        character.setSp5(1);
+                        break;
+                    }
+                    case 10: {
+                        character.setBAB("+5");
+                        character.setWill(7);
+                        character.setSp4(3);
+                        character.setSp5(2);
+                        break;
+                    }
+                    case 11: {
+                        character.setSp3(4);
+                        character.setSp6(1);
+                        break;
+                    }
+                    case 12: {
+                        character.setBAB("+6/+1");
+                        character.setWill(8);
+                        character.setReflex(4);
+                        character.setFort(4);
+                        character.setSp5(3);
+                        character.setSp6(2);
+                        break;
+                    }
+                    case 13: {
+                        character.setSp4(4);
+                        character.setSp7(1);
+                        break;
+                    }
+                    case 14: {
+                        character.setBAB("+7/+2");
+                        character.setWill(9);
+                        character.setSp6(3);
+                        character.setSp7(2);
+                        break;
+                    }
+                    case 15: {
+
+                        character.setFort(5);
+                        character.setReflex(5);
+                        character.setSp5(4);
+                        character.setSp8(1);
+                        break;
+                    }
+                    case 16: {
+                        character.setBAB("+8/+3");
+                        character.setWill(10);
+                        character.setSp8(2);
+                        character.setSp7(3);
+                        break;
+                    }
+                    case 17: {
+                        character.setSp9(1);
+                        character.setSp6(4);
+                        break;
+                    }
+                    case 18: {
+                        character.setBAB("+9/+4");
+                        character.setReflex(6);
+                        character.setWill(11);
+                        character.setFort(6);
+                        character.setSp8(3);
+                        character.setSp9(2);
+                        break;
+                    }
+                    case 19: {
+                        character.setSp7(4);
+                        character.setSp9(3);
+
+                        break;
+                    }
+                    case 20: {
+                        character.setBAB("+10/+5");
+                        character.setWill(12);
+                        character.setSp9(4);
+                        character.setSp8(4);
+                        break;
+                    }
+
+                }
+                break;
+
+
+
+            }
         }
-        this.character=character;
-    }
-    public Character returnCharacter()
-    {
+
         return character;
     }
 }

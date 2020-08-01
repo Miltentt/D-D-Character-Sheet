@@ -2,10 +2,7 @@ package com.example.ddcharactersheet;
 
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,10 +13,13 @@ import com.example.ddcharactersheet.Character_Creation.Add_Char;
 import com.example.ddcharactersheet.Character_Pages.Character_Sheet;
 import com.example.ddcharactersheet.Model.Character;
 import com.example.ddcharactersheet.Repository.Repository;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class    MainActivity extends AppCompatActivity implements Character_adapter.ItemClickListener {
 private List<Character> Characters = new LinkedList();
@@ -34,9 +34,6 @@ private Repository repository;
         repository = Repository.Companion.Repository(this);
        Characters = repository.getCharacterDatabse().characterdao().loadAllTasks();
 
-        linear = (LinearLayout) findViewById(R.id.linear);
-        recycler = (RecyclerView) findViewById(R.id.recycler);
-        recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new Character_adapter(this, Characters);
         adapter.setClickListener(this::onItemClick);
         recycler.setAdapter(adapter);

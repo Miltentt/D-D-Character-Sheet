@@ -1,25 +1,27 @@
 package com.example.ddcharactersheet.Recursive;
 
-import android.arch.persistence.room.Room;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.Adapters.Skills_Adapter;
 import com.example.ddcharactersheet.Character_Pages.Character_Sheet;
-import com.example.ddcharactersheet.RoomDB.Feats_DB;
+import com.example.ddcharactersheet.Model.Character;
 import com.example.ddcharactersheet.Model.Feats_Entity;
 import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.RoomDB.Feats_DB;
 import com.example.ddcharactersheet.Skill_List;
-import com.example.ddcharactersheet.Adapters.Skills_Adapter;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 public class Skills extends AppCompatActivity implements Skills_Adapter.ItemClickListener {
     private List<Skill_List> list = new LinkedList<>();

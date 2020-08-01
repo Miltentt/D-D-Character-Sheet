@@ -1,47 +1,49 @@
 package com.example.ddcharactersheet.Character_Creation;
-import android.content.Intent;
+
+
+import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.R;
 
-import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.List;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 
-public class Add_Char_2 extends AppCompatActivity {
-    private TextView choose;
+public class Add_Char_2 extends Fragment {
     private Character character;
     private RadioGroup rg;
-    private List<Character> Characters = new LinkedList();
+    private Character_Creation_ViewModel character_creation_viewModel;
     String races[] = {"Dwarf","Human","Elf","Gnome","Half-Elf","Half-Orc","Halfling","Tiefling","Orog","Fey'ri","Fire Genasi"};
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.race);
-        getSupportActionBar().hide();
-        choose = findViewById(R.id.choose1);
-        rg = findViewById(R.id.radio);
-        Intent i = this.getIntent();
-        character = (Character) i.getSerializableExtra("character");
-
-
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.race, container, false);
+        rg = view.findViewById(R.id.radio);
+        return view;
     }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+character_creation_viewModel = ViewModelProviders.of(this).get(Character_Creation_ViewModel.class);
+    }
+
     public void next(View view)
     {
-        Intent i = new Intent(this, Race_Main.class);
         int buttonid = rg.getCheckedRadioButtonId();
         View rb = rg.findViewById(buttonid);
         int idx = rg.indexOfChild(rb);
+character=character_creation_viewModel.returnCharacter();
       character.setRace(races[idx]);
-        i.putExtra("character", (Serializable)character);
-        startActivity(i);
+      character_creation_viewModel.updateCharacter(character);
+
     }
 }

@@ -1,13 +1,15 @@
 package com.example.ddcharactersheet.RoomDB;
 
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Insert;
-import android.arch.persistence.room.Query;
-import android.arch.persistence.room.Update;
+
 
 import com.example.ddcharactersheet.Model.Character;
 
 import java.util.List;
+
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
 
 @Dao
 public interface CharacterDao {

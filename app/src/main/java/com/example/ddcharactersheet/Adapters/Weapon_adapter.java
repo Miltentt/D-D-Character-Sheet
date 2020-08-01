@@ -1,7 +1,6 @@
 package com.example.ddcharactersheet.Adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import com.example.ddcharactersheet.Model.Equipment_Entity;
 import com.example.ddcharactersheet.R;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Weapon_adapter extends RecyclerView.Adapter<Weapon_adapter.ViewHolder> {
     private LayoutInflater Inflater;

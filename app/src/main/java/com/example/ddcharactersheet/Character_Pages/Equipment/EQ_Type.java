@@ -1,21 +1,22 @@
 package com.example.ddcharactersheet.Character_Pages.Equipment;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.ddcharactersheet.Model.Character;
+import com.example.ddcharactersheet.R;
 import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.RoomDB.EQ_Database;
-import com.example.ddcharactersheet.R;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 public class EQ_Type extends AppCompatActivity {
     private RadioGroup rg;

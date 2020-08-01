@@ -1,7 +1,6 @@
 package com.example.ddcharactersheet.Adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import com.example.ddcharactersheet.R;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Feats_Recycler_Character extends RecyclerView.Adapter<Feats_Recycler_Character.ViewHolder> {
     private List<Feats_List> list =  new LinkedList<>();

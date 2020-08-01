@@ -9,11 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Extra_Spells {
-private Character character;
 
-    public Extra_Spells(Context context, Character character) {
-
-
+    public static Character Extra_Spells(Character character)
+    {
         switch (character.getLevel()) {
 
             case 1: {
@@ -29,7 +27,7 @@ private Character character;
                 {
                     character.setSp2(character.getSp2()+1);
                 }
-               break;
+                break;
             }
             case 5:
             {
@@ -74,11 +72,10 @@ private Character character;
                 }
                 break;
             }
-        }
-   this.character= character;
+
+
     }
-    public Character returnCharacter()
-    {
         return character;
-    }
+}
+
 }

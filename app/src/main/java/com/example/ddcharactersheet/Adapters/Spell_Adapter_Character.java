@@ -1,7 +1,6 @@
 package com.example.ddcharactersheet.Adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import com.example.ddcharactersheet.Spells;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Spell_Adapter_Character extends RecyclerView.Adapter<Spell_Adapter_Character.ViewHolder> {
     private List<Spells> Spellsl =  new LinkedList<>();

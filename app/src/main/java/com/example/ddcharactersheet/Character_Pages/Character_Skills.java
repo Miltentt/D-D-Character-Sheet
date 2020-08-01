@@ -1,24 +1,26 @@
 package com.example.ddcharactersheet.Character_Pages;
 
-import android.arch.persistence.room.Room;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
-import com.example.ddcharactersheet.Character_Pages.Equipment.Equipment;
-import com.example.ddcharactersheet.R;
-import com.example.ddcharactersheet.Skill_List;
-import com.example.ddcharactersheet.Recursive.Skills;
 import com.example.ddcharactersheet.Adapters.Skills_Adapter_Character;
+import com.example.ddcharactersheet.Character_Pages.Equipment.Equipment;
+import com.example.ddcharactersheet.Model.Character;
+import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.Recursive.Skills;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.Skill_List;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 public class Character_Skills extends Skills {
 

@@ -2,7 +2,6 @@ package com.example.ddcharactersheet.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,8 @@ import com.example.ddcharactersheet.Model.Character;
 import com.example.ddcharactersheet.R;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Character_adapter extends RecyclerView.Adapter<Character_adapter.myViewHolder>{
    Context context;

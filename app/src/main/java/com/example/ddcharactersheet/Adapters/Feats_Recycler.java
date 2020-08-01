@@ -1,8 +1,6 @@
 package com.example.ddcharactersheet.Adapters;
 
-import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +9,17 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
-import com.example.ddcharactersheet.RoomDB.Feats_DB;
 import com.example.ddcharactersheet.Model.Feats_Entity;
 import com.example.ddcharactersheet.Model.Feats_List;
 import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
+import com.example.ddcharactersheet.RoomDB.Feats_DB;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 public class Feats_Recycler extends RecyclerView.Adapter<Feats_Recycler.ViewHolder> {
     private List<Feats_List> list =  new LinkedList<>();

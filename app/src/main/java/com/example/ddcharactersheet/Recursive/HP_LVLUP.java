@@ -1,22 +1,23 @@
 package com.example.ddcharactersheet.Recursive;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.ddcharactersheet.Model.Character;
-import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.R;
+import com.example.ddcharactersheet.RoomDB.Character_Databse;
 import com.example.ddcharactersheet.Statistics.Base_Stats;
 import com.example.ddcharactersheet.Statistics.Extra_Spells;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 public class HP_LVLUP extends AppCompatActivity {
 private Character_Databse db;
@@ -80,7 +81,7 @@ hp.setHint("Roll a d12");
     {
         Characters.get(position).setHp(Characters.get(position).getHp()+Integer.parseInt(hp.getText().toString())+Characters.get(position).getConc());
         Characters.get(position).setLevel(Characters.get(position).getLevel()+1);
-        Base_Stats a= new Base_Stats(this,Characters.get(position));
+        Base_Stats.Stats(Characters.get(position));
         if(Characters.get(position).getClas().equals("barbarian") || Characters.get(position).getClas().equals("rogue"))
         {
             Characters.get(position).setAC( Characters.get(position).getAC()+  Characters.get(position).getDexc());
@@ -89,7 +90,7 @@ hp.setHint("Roll a d12");
         {
             Characters.get(position).setAC( Characters.get(position).getAC()+  Characters.get(position).getWisc());
         }
-        Extra_Spells extra = new Extra_Spells(this,Characters.get(position));
+        Extra_Spells.Extra_Spells(Characters.get(position));
         db.characterdao().updatechar(Characters.get(position));
         if(Characters.get(position).getClas().equals("wizard") || Characters.get(position).getClas().equals("sorcerer"))
         {
