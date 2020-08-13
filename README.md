@@ -4,7 +4,7 @@ Project containing whole character creation process (all classes and races from 
 
 ## Technologies
 
-- Room Database
+- - Room Persistance Library
 
 ## Status
 
